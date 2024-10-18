@@ -19,7 +19,7 @@ export class Transaction extends CountableEntity {
   @Column({ generated: true, type: "bigint" })
   public override readonly number: number;
 
-  @Column({ type: "bytea", transformer: hexTransformer })
+  @Column({ type: "bytea", transformer: hexTransformer, nullable: true })
   public readonly to: string;
 
   @Column({ type: "bytea", transformer: hexTransformer })

@@ -31,7 +31,7 @@ export class Transaction extends BaseEntity {
   @Column({ generated: true, type: "bigint" })
   public number: number;
 
-  @Column({ type: "bytea", transformer: normalizeAddressTransformer })
+  @Column({ type: "bytea", transformer: normalizeAddressTransformer, nullable: true })
   public readonly to: string;
 
   @Index()

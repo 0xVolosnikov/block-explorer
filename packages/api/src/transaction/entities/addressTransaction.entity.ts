@@ -19,7 +19,7 @@ export class AddressTransaction extends BaseEntity {
   @Column({ type: "bytea", transformer: hexTransformer })
   public readonly transactionHash: string;
 
-  @Column({ type: "bytea", transformer: normalizeAddressTransformer })
+  @Column({ type: "bytea", transformer: normalizeAddressTransformer, nullable: true })
   public readonly address: string;
 
   @Index()
